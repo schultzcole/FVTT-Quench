@@ -75,7 +75,6 @@ export default class Quench {
      */
     async runSelectedBatches(batchKeys) {
         // Cleanup - create a new root suite and clear the state of the results application
-        const Mocha = this.mocha.Mocha;
         Mocha.suite = this.mocha.suite = new Mocha.Suite("__root", new Mocha.Context(), true);
         await this.app.clear();
 
